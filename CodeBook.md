@@ -50,9 +50,11 @@ downloaded the UCI Dataset into the ./data directory
 ### loading the labels and the features keys (name of the fields)
 ### filtering
 both the training and the test sets have been filtered, selecting only the interesting variables.
-  indexes_of_interesting_features <- grep("mean\\(|std\\(", features[,2])
+```r
+indexes_of_interesting_features <- grep("mean\\(|std\\(", features[,2])
   
-  training_data <- training_data[,indexes_of_interesting_features]
+training_data <- training_data[,indexes_of_interesting_features]
+```
 ### merging test and training data sets
 ### replacing the label codes
 ### data reshaping
